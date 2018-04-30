@@ -1,4 +1,4 @@
-package com.xoxo;
+package com.gmail.henry82xoxo.xoxo;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "xoxo";
+        return "XOXO";
     }
 }

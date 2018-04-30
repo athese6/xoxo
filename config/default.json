@@ -1,0 +1,173 @@
+{
+  "admins": [
+    "athese6@gmail.com",
+    "henry@hapoom.co"
+  ],
+  "app": {
+    "id": "xoxo",
+    "contextName": "http://localhost",
+    "port": 8000,
+    "views": "./views",
+    "view engine": "ejs",
+    "logger": "dev",
+    "public": "public",
+    "favicon": "public_dev/img/icon/fav.png",
+    "default_link_type": "article",
+    "default_link_image": "public/img/link.png",
+    "requestLimit": "200MB"
+  },
+  "ssl": {
+    "enable": false,
+    "port": 8443,
+    "passphrase": "tmvkdlzk7082",
+    "key": "ssl/_wildcard_.xoxo.co_20170529U08V.key.pem",
+    "cert": "ssl/_wildcard_.xoxo.co_20170529U08V.crt.pem",
+    "ca": [
+      "ssl/RootChain/COMODORSAAddTrustCA.crt",
+      "ssl/RootChain/COMODORSADomainValidationSecureServerCA.crt"
+    ]
+  },
+  "session": {
+    "secret": "xoxo app user auth 4642164",
+    "resave": false,
+    "rolling": true,
+    "saveUninitialized": false,
+    "name": "connect.xoxo",
+    "cookie": {
+      "httpOnly": false,
+      "secure": false,
+      "maxAge": 30000,
+      "rememberMe": 31540000000
+    }
+  },
+  "thinky": {
+    "db": "xoxo",
+    "host": "localhost",
+    "port": 28015,
+    "min": 50,
+    "max": 1000,
+    "bufferSize": 50,
+    "timeoutError": 1000,
+    "timeoutGb": 3600000,
+    "authKey": ""
+  },
+  "ioredis": {
+    "enable": true,
+    "host": "127.0.0.1",
+    "port": 6379
+  },
+  "i18n": {
+    "cookie": "locale",
+    "defaultLocale": "ko",
+    "directory": "i18n",
+    "queryParameter": "lang",
+    "autoReload": true,
+    "syncFiles": true,
+    "updateFiles": true,
+    "register": "global",
+    "locales": [
+      {
+        "code": "en",
+        "name": "English",
+        "available": true
+      },
+      {
+        "code": "ko",
+        "name": "한국어",
+        "available": true
+      }
+    ]
+  },
+  "passport": {
+    "local": {
+      "usernameField": "phone",
+      "passwordField": "password"
+    },
+    "facebook": {
+      "clientID": "1319335018187741",
+      "clientSecret": "77218af3a3d1001fd0ad87752a218b08",
+      "callbackURL": "/api/auth/facebook/callback",
+      "profileFields": [
+        "id",
+        "name",
+        "link",
+        "gender",
+        "locale",
+        "picture",
+        "timezone",
+        "updated_time",
+        "email"
+      ]
+    },
+    "kakao": {
+      "clientID": "01b556e0a27ca63ee491a9aa76131825",
+      "clientSecret": "3yZeqWSrr1WQKiVDEBWZF4d4fXsWw4dc",
+      "callbackURL": "/api/auth/kakao/callback"
+    },
+    "naver": {
+      "clientID": "pA3UtWVYKp8Wur2yyXJB",
+      "clientSecret": "YKLO_tTfL4",
+      "callbackURL": "/api/auth/naver/callback"
+    },
+    "google": {
+      "clientID": "1008193990033-2ts59bgn1t8ji2nbar7cd2ie6kcrjid5.apps.googleusercontent.com",
+      "clientSecret": "9yj8fLxk5zxhLgFklcVVMI_f",
+      "callbackURL": "/api/auth/google/callback"
+    },
+    "instagram": {
+      "clientID": "8fd31e832f5f47faa54afd6a35952f79",
+      "clientSecret": "d085998cdf314fb782e60e1f9aa56d97",
+      "callbackURL": "/api/auth/instagram/callback"
+    }
+  },
+  "webpack": {
+    "hotReload": true,
+    "optimize": false,
+    "clearOutput": true,
+    "analyze": false,
+    "splitVendor": true,
+    "extractCSS": true,
+    "inputDir": "client",
+    "outputDir": "public_dev",
+    "publicPath": "/public/",
+    "entries": {
+      "index": "index.js"
+    },
+    "polyfills": [
+      "babel-polyfill",
+      "dom-shims",
+      "console-polyfill",
+      "event-source-polyfill",
+      "classlist-polyfill",
+      "custom-event-polyfill"
+    ],
+    "copy": [
+      "img",
+      "fonts",
+      "root"
+    ],
+    "ignore": [
+      "electron"
+    ],
+    "babel": {
+      "compact": true,
+      "cacheDirectory": true,
+      "presets": [
+        "es2015",
+        "stage-0",
+        "react"
+      ],
+      "plugins": [
+        "transform-decorators-legacy",
+        "transform-react-constant-elements",
+        "transform-react-inline-elements",
+        "transform-flow-strip-types",
+        "transform-remove-strict-mode",
+        "transform-react-remove-prop-types",
+        "transform-inline-environment-variables",
+        "syntax-dynamic-import",
+        "dynamic-import-node"
+      ]
+    }
+  }
+}

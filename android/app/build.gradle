@@ -73,7 +73,7 @@ import com.android.build.OutputFile
  */
 
 project.ext.react = [
-    entryFile: "index.js"
+    entryFile: "index.native.js"
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
@@ -95,10 +95,10 @@ def enableProguardInReleaseBuilds = false
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    buildToolsVersion '27.0.3'
 
     defaultConfig {
-        applicationId "com.xoxo"
+        applicationId "com.gmail.henry82xoxo.xoxo"
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 1

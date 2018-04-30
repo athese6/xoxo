@@ -1,0 +1,28 @@
+{
+  "app": {
+    "contextName": "https://hapoom.co",
+    "port": 80,
+    "public": "public",
+    "favicon": "public/img/icon/fav.png",
+    "default_link_image": "public/img/link.png"
+  },
+  "ssl": {
+    "enable": true,
+    "port": 443
+  },
+  "ioredis": {
+    "enable": true,
+    "host": "hapoom.redis.cache.windows.net",
+    "password": "8+B85saSZ8VBHlKjEO7nc821hcTSAf7wLKtscrK7llY=",
+    "port": 6379
+  },
+  "i18n": {
+    "syncFiles": false,
+    "updateFiles": false
+  },
+  "webpack": {
+    "hotReload": false,
+    "optimize": true,
+    "outputDir": "public"
+  }
+}

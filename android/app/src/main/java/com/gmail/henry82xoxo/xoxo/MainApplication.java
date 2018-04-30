@@ -1,4 +1,4 @@
-package com.xoxo;
+package com.gmail.henry82xoxo.xoxo;
 
 import android.app.Application;
 
@@ -28,7 +28,7 @@ public class MainApplication extends Application implements ReactApplication {
 
     @Override
     protected String getJSMainModuleName() {
-      return "index";
+      return "index.native";
     }
   };
 
