@@ -4,7 +4,17 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
+    "android": "node node_modules/react-native/local-cli/cli.js run-android",
+    "test": "jest",
+    "--ios-build": "xcodebuild  -project ios/xoxo.xcodeproj -scheme xoxo -sdk iphonesimulator -destination platform='iOS Simulator',name='iPhone 6 Plus' -derivedDataPath ios/build",
+    "--ios-launch-sim": "xcrun instruments -w 'iPhone 5s (9.2)'",
+    "--ios-install-app": "xcrun simctl install booted ios/build/Build/Products/Debug-iphonesimulator/YourAppName.app",
+    "--ios-launch-installed": "xcrun simctl launch booted org.yourcompany.YourAppName",
+    "--ios": "npm run ios-build && npm run ios-launch-sim || npm run ios-install-app && npm run ios-launch-installed",
+    "--android-emulator": "emulator -avd xoxo -scale 0.4 -gpu on -memory 2048",
+    "--android-emulator-create": "android create avd -n xoxo -t 1 -b x86 --skin 1080x1920 --device 'Nexus 5'",
+    "--android-emulator-delete": "android delete avd -n xoxo"
   },
   "dependencies": {
     "react": "16.3.1",
