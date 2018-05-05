@@ -56,7 +56,7 @@ buck-out/
 *.jsbundle
 /config/
 /android/app/fabric.properties
-/android/app/src/main/res/values/config_string.xml
+/android/app/src/main/AndroidManifest.xml
 /ios/Index/
 /ios/xoxo.xcodeproj
 /ios/xoxo/Info.plist
