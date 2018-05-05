@@ -1,0 +1,79 @@
+PODS:
+  - Crashlytics (3.10.1):
+    - Fabric (~> 1.7.5)
+  - Fabric (1.7.6)
+  - React (0.55.3):
+    - React/Core (= 0.55.3)
+  - React/Core (0.55.3):
+    - yoga (= 0.55.3.React)
+  - React/DevSupport (0.55.3):
+    - React/Core
+    - React/RCTWebSocket
+  - React/fishhook (0.55.3)
+  - React/RCTActionSheet (0.55.3):
+    - React/Core
+  - React/RCTBlob (0.55.3):
+    - React/Core
+  - React/RCTGeolocation (0.55.3):
+    - React/Core
+  - React/RCTImage (0.55.3):
+    - React/Core
+    - React/RCTNetwork
+  - React/RCTLinkingIOS (0.55.3):
+    - React/Core
+  - React/RCTNetwork (0.55.3):
+    - React/Core
+  - React/RCTSettings (0.55.3):
+    - React/Core
+  - React/RCTText (0.55.3):
+    - React/Core
+  - React/RCTVibration (0.55.3):
+    - React/Core
+  - React/RCTWebSocket (0.55.3):
+    - React/Core
+    - React/fishhook
+    - React/RCTBlob
+  - ReactNativeFabric (0.5.1):
+    - Crashlytics
+    - Fabric
+    - React
+  - yoga (0.55.3.React)
+
+DEPENDENCIES:
+  - React/Core (from `../node_modules/react-native`)
+  - React/DevSupport (from `../node_modules/react-native`)
+  - React/RCTActionSheet (from `../node_modules/react-native`)
+  - React/RCTGeolocation (from `../node_modules/react-native`)
+  - React/RCTImage (from `../node_modules/react-native`)
+  - React/RCTLinkingIOS (from `../node_modules/react-native`)
+  - React/RCTNetwork (from `../node_modules/react-native`)
+  - React/RCTSettings (from `../node_modules/react-native`)
+  - React/RCTText (from `../node_modules/react-native`)
+  - React/RCTVibration (from `../node_modules/react-native`)
+  - React/RCTWebSocket (from `../node_modules/react-native`)
+  - ReactNativeFabric (from `../node_modules/react-native-fabric`)
+  - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Crashlytics
+    - Fabric
+
+EXTERNAL SOURCES:
+  React:
+    :path: "../node_modules/react-native"
+  ReactNativeFabric:
+    :path: "../node_modules/react-native-fabric"
+  yoga:
+    :path: "../node_modules/react-native/ReactCommon/yoga"
+
+SPEC CHECKSUMS:
+  Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
+  Fabric: f8d42c893bb187326a7968b62abe55c36a987a46
+  React: aa2040dbb6f317b95314968021bd2888816e03d5
+  ReactNativeFabric: 3912bf9c714d7cc98110eadf06ca6dedef219322
+  yoga: a23273df0088bf7f2bb7e5d7b00044ea57a2a54a
+
+PODFILE CHECKSUM: b8909bfb01723681eb719a1c687c9d06d0125417
+
+COCOAPODS: 1.5.0

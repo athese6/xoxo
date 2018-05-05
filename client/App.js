@@ -12,6 +12,8 @@ import {
     View
 } from 'react-native';
 import debug from "debug";
+import moment from "moment";
+import {Crashlytics, Answers} from 'react-native-fabric';
 
 const instructions = Platform.select({
     ios: 'Press Cmd+R to reload,\n' +
@@ -26,13 +28,20 @@ type Props = {};
 debug("load %s %s", Platform.OS, Platform.Version);
 console.log("load %s", Platform.OS, Platform.Version);
 export default class App extends Component<Props> {
+    componentDidMount() {
+        Crashlytics.setUserName('Test Henry');
+        Crashlytics.setString('Test', moment().format('MMMM Do YYYY, h:mm:ss a'));
+        Answers.logCustom('Test_Answer_log', {time: "111a"});
+        Answers.logSignUp('Test_Local', true);
+    }
+
     render() {
         debug("load %s %s", Platform.OS, Platform.Version);
         console.log("load %s", Platform.OS, Platform.Version);
         return (
             <View style={styles.container}>
                 <Text style={styles.welcome}>
-                    Welcome to React Native!
+                    {"Welcome to React Native! : " + moment().format('MMMM Do YYYY, h:mm:ss a')}
                 </Text>
                 <Text style={styles.instructions}>
                     To get started, edit App.js

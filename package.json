@@ -7,6 +7,7 @@
     "1ios": "node node_modules/react-native/local-cli/cli.js run-ios",
     "1android": "node node_modules/react-native/local-cli/cli.js run-android",
     "test": "jest",
+    "clean": "react-native-clean-project",
     "ios-bundle": "react-native bundle --dev false --entry-file index.ios.js --platform ios --bundle-output ios/main.jsbundle",
     "ios-dev-bundle": "react-native bundle --entry-file index.ios.js --platform ios --bundle-output ios/main.jsbundle",
     "android-bundle": "react-native bundle --dev false --entry-file index.android.js --platform android --bundle-output android/app/src/main/assets/index.android.bundle",
@@ -27,8 +28,10 @@
     "express": "^4.16.3",
     "i18n": "^0.8.3",
     "ioredis": "^3.2.2",
+    "moment": "^2.22.1",
     "react": "16.3.1",
-    "react-native": "0.55.3"
+    "react-native": "0.55.3",
+    "react-native-fabric": "^0.5.1"
   },
   "devDependencies": {
     "babel-jest": "22.4.3",
@@ -48,6 +51,7 @@
     "imagemin-webpack-plugin": "^2.1.1",
     "jest": "^22.4.3",
     "optimize-css-assets-webpack-plugin": "^4.0.0",
+    "react-native-clean-project": "^1.0.8",
     "react-test-renderer": "16.3.1",
     "webpack": "^4.6.0",
     "webpack-bundle-analyzer": "^2.11.1",
