@@ -68,3 +68,6 @@
 -dontwarn java.nio.file.*
 -dontwarn org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
 -dontwarn okio.**
+
+#https://github.com/luggit/react-native-config
+-keep class com.gmail.henry82xoxo.xoxo.BuildConfig { *; }

@@ -35,6 +35,8 @@ target 'xoxo' do
     ]
   pod 'ReactNativeFabric', :path => '../node_modules/react-native-fabric'
 
+  #pod 'react-native-config', :path => '../node_modules/react-native-config'
+
   target 'xoxoTests' do
     inherit! :search_paths
     # Pods for testing

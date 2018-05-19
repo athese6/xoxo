@@ -1,5 +1,12 @@
 apply plugin: "com.android.application"
 
+project.ext.envConfigFiles = [
+    debug: ".env.development",
+    release: ".env.production",
+    anothercustombuild: ".env",
+]
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+
 import com.android.build.OutputFile
 
 /**
@@ -73,7 +80,7 @@ import com.android.build.OutputFile
  */
 
 project.ext.react = [
-        entryFile: "index.native.js"
+        entryFile: "client/index.native.js"
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
@@ -116,11 +123,12 @@ android {
         applicationId "com.gmail.henry82xoxo.xoxo"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 1
-        versionName "1.0"
+        versionCode project.env.get("ENV_VERSION_CODE").toInteger()
+        versionName project.env.get("ENV_VERSION_NAME")
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
+        manifestPlaceholders = [ FABRIC_API_KEY:project.env.get("FABRIC_API_KEY") ]
     }
     splits {
         abi {
@@ -152,6 +160,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-config')
     compile project(':react-native-fabric')
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"

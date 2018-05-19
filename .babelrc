@@ -1,3 +1,20 @@
 {
-  "presets": ["react-native"]
+  "plugins": [
+    "transform-decorators-legacy",
+    "transform-react-constant-elements",
+    "transform-react-inline-elements",
+    "transform-flow-strip-types",
+    "transform-remove-strict-mode",
+    "transform-react-remove-prop-types",
+    "transform-inline-environment-variables",
+    "transform-class-properties",
+    "syntax-dynamic-import",
+    "dynamic-import-node"
+  ],
+  "presets": [
+    "env",
+    "react",
+    "react-native",
+    "stage-2"
+  ]
 }

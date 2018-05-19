@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <% include headers/default.ejs %>
+</head>
+<body>
+<% if (!!user && user.lang == "en") { %>
+<% include bodies/privacy-en.ejs %>
+<% } else { %>
+<% include bodies/privacy.ejs %>
+<% } %>
+
+<% include scripts/default.ejs %>
+</body>
+</html>
